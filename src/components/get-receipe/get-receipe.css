@@ -1,0 +1,33 @@
+.get-receipe{
+
+    max-width: 500px;
+    margin: auto;
+    background-color: lightgrey;
+    padding: 10px;
+    display: flex;
+    align-items: center;
+    border: 2px solid black;
+    border-radius: 10px;
+    justify-content: space-between;
+}
+
+section>div>h3{
+    font-family: "Rubik Storm", system-ui;
+    font-style: normal;    
+    margin-bottom: 0px;
+    font-size: 22px;
+}
+section>div>p{
+    margin-top: 5px;  /* Remove all margins */
+    font-size: 14px;
+}
+
+section>button{
+    padding: 10px 10px;
+    font-size: 12px;
+    background-color: darkorange;
+    color: white;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+}
