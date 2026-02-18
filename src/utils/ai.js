@@ -20,7 +20,7 @@ You are an assistant that receives a list of ingredients that a user has and sug
 const anthropic = new Anthropic( {
     // Make sure you set an environment variable in Scrimba 
     // for ANTHROPIC_API_KEY
-    apiKey: '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',
+    apiKey: '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',
     dangerouslyAllowBrowser: true,
 } )
 
