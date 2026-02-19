@@ -16,11 +16,11 @@ You are an assistant that receives a list of ingredients that a user has and sug
 // your API calls can be made. Doing so will keep your
 // API keys private.
 
+const apiKey = import.meta.env.VITE_ANTHROPIC_API_KEY;
 
 const anthropic = new Anthropic( {
-    // Make sure you set an environment variable in Scrimba 
-    // for ANTHROPIC_API_KEY
-    apiKey: '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',
+
+    apiKey: apiKey,
     dangerouslyAllowBrowser: true,
 } )
 
