@@ -50,3 +50,9 @@
 .items-list{
      margin-left: 50px;
 }
+
+.ingredient-hint {
+    margin-left: 50px;
+    font-size: 13px;
+    color: #e07000;
+}

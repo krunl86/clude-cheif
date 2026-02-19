@@ -1,4 +1,3 @@
-import React from 'react';
 import './get-ingredient.css';
 export default function GetIngredient ( props ) {
 
@@ -30,6 +29,9 @@ export default function GetIngredient ( props ) {
 
             { props.ingredientList.length > 0 &&
                 <h1 className="item-title">Ingredients On Hands</h1>
+            }
+            { props.ingredientList.length > 0 && props.ingredientList.length < 5 &&
+                <p className="ingredient-hint">Add at least { 5 - props.ingredientList.length } more ingredient{ 5 - props.ingredientList.length > 1 ? "s" : "" } to get a recipe</p>
             }
             <ul className="items-list">
                 { items }
