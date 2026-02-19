@@ -16,15 +16,21 @@ You are an assistant that receives a list of ingredients that a user has and sug
 // your API calls can be made. Doing so will keep your
 // API keys private.
 
-const apiKey = import.meta.env.VITE_ANTHROPIC_API_KEY;
 
-const anthropic = new Anthropic( {
 
-    apiKey: apiKey,
-    dangerouslyAllowBrowser: true,
-} )
-
+async function getApiKey () {
+    const response = await fetch( 'https://nameless-surf-6558.krunalgadgetguru.workers.dev/' );
+    const data = await response.json();
+    return data.apiKey;
+}
 export async function getRecipeFromChefClaude ( ingredientsArr ) {
+
+    const APIKEY = await getApiKey();
+
+    const anthropic = new Anthropic( {
+        apiKey: APIKEY,
+        dangerouslyAllowBrowser: true,
+    } );
     const ingredientsString = ingredientsArr.join( ", " )
 
     const msg = await anthropic.messages.create( {
